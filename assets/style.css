@@ -14,6 +14,7 @@ ul.items{margin-left:24px;padding-left:1.1em}
 @media(max-width:600px){header img{height:40px}header h1{font-size:1rem}}
 figure.g{margin:0 0 28px;padding:0}figure.g figcaption{font-size:15px;margin:4px 6px}figure.g .t{font-weight:700}
 figure.g .s{font-size:14px;word-break:break-all}ul.src li{margin:4px 0;word-break:break-all}
+figure.g .doubt{border-left:4px solid #FCA311;background:#fff8ea;padding:8px 12px;margin:8px 0}
 #tvvnav{position:fixed;left:0;top:0;bottom:0;width:280px;box-sizing:border-box;padding:12px 10px;background:#000;color:#fff;border-right:1px solid #333;font-family:Arial,Helvetica,sans-serif;overflow-y:auto;z-index:20}
 #tvvnav summary{list-style:none;cursor:default;display:flex;align-items:center;gap:8px;border-bottom:1px solid #e8063c;padding-bottom:9px;margin-bottom:10px}
 #tvvnav summary::-webkit-details-marker{display:none}
