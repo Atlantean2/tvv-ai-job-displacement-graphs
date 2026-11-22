@@ -68,6 +68,16 @@ for k,lab,note,fs in TABS:
         b+=fig_plus(g,out,urls)
         n+=1  # count only; do not use n for EXTRA filenames (keeps labor-06..10, growth-11..14)
     w(k,lab,b)
+# Weekly Focus AI Jobs charts (from focus/weekly/<date>/work/weekly.json, category 'AI Jobs'), added 2026-11-22.
+import weekly_lib as WL
+common_mod=sys.modules["common"];common_mod.CSS+=WL.GRID_CSS
+kc=WL.charts("AI Jobs")
+if kc:
+    b='<h2 class="desk">Karp Claims</h2><div class="wk">A widely viewed Finance Bureau video (Nov 7, 2026) retells Palantir CEO Alex Karp’s view that only two groups have a safe future in the AI economy: people with vocational training and neurodivergent thinkers. These charts test those claims against official data, one by one; where the data do not support a claim, the caption says so.</div>'
+    b+="\n".join(WL.fig(c,E,save_img) for c in kc)
+    for c in kc:
+        for l,u in c["sources"]: src.setdefault(u,l)
+    n+=len(kc);w("karp","Karp Claims",b)
 w("sources","Sources",f'<h2 class="desk">Sources ({len(src)} links)</h2><p>All charts were drawn by TechVestVentures from the data linked below. Published third-party values are cited as such in each caption.</p><ul class="src">'+"".join(f'<li>{E(l)}: <a href="{E(u)}">{E(u)}</a></li>' for u,l in src.items())+"</ul>")
 import common
 common.CSS+="""
